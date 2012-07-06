@@ -37,7 +37,7 @@ namespace Scan {
         std::vector<int> get_periods() const;
         std::vector<double> get_dlines() const;
         std::vector<double> get_wcets() const;
-
+        void clear();
         double get_util() const;
 
         template<class Cmp>
@@ -60,6 +60,12 @@ namespace Scan {
     public:
         bool operator()(const Task &a, const Task &b) {
             return a.get_dline() < b.get_dline();
+        }
+    };
+ class TaskCmpWcet : public std::less<Task> {
+    public:
+        bool operator()(const Task &a, const Task &b) {
+             return a.get_wcet()< b.get_wcet();
         }
     };
 

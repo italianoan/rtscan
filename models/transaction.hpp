@@ -161,7 +161,8 @@ double get_task_offset(unsigned int i);
 		   deadline.
 		*/
 		std::vector<double> get_utils() const;
-
+		
+		void clear();
 		/**
 		   Conversion operator
 		*/

@@ -113,4 +113,9 @@ namespace Scan {
 			u += s[i].get_wcet() / double(s[i].get_period());
 		return u;
     }
+     void TaskSet::clear()
+    {
+        s.clear();
+    }
+
 }

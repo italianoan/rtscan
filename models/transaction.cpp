@@ -115,6 +115,14 @@ namespace Scan {
 			offset += tmp_dl;
 		}
 	}
+	void Transaction::clear()
+		{
+		allocated.clear();
+		offsets.clear();
+		tasks.clear();
+
+
+		}
 
 
 	void Transaction::proportional_dlines()
@@ -143,7 +151,7 @@ namespace Scan {
 
 		return tr;
 	}
-
+	
 	ostream &operator<<(ostream &s, Transaction &tr)
 	{
 		s << "Name :" << tr.get_name() << endl;
